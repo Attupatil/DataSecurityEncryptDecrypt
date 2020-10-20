@@ -5,3 +5,7 @@ In this project includes how to encrypt and decrypt messages and texts using sim
 
 ## key
 The key is assumed to mean that if a person knows the value of the key, he or she will be able to decrypt the text, and if he or she does not know, he or she will not be able to decrypt the text. It's like a real key that can open up access to the message text.
+
+
+## General
+A Java application can accept data from the external world using the command-line arguments. JVM wraps the argument in the array of strings and passes the array to the main method.
