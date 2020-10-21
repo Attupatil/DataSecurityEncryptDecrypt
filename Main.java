@@ -1,4 +1,4 @@
-package encryptdecrypt;
+// package encryptdecrypt;
 
 // import java.util.Scanner;
 
