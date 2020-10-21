@@ -5,13 +5,21 @@ In this project includes how to encrypt and decrypt messages and texts using sim
 
 ## Run
 
-Input  ```java Main -mode enc -key 5 -data "This is Secret message from Atharva" ```
+Input 
 
-Output   `Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f`
+    java Main -mode enc -key 5 -data "This is Secret message from Atharva" 
 
-Input    `java Main -key 5 -data "Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f" -mode dec" `
+Output  
+    
+    Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f
 
-Output   `This is Secret message from Atharva`
+Input
+    
+    java Main -key 5 -data "Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f" -mode dec" 
+
+Output
+    
+    This is Secret message from Atharva
 
 ## key
 The key is assumed to mean that if a person knows the value of the key, he or she will be able to decrypt the text, and if he or she does not know, he or she will not be able to decrypt the text. It's like a real key that can open up access to the message text.
