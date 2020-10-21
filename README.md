@@ -36,4 +36,4 @@ All the arguments are guaranteed to be passed to the program. If for some reason
     If there is no -mode, the program should work in enc mode.
     If there is no -key, the program should consider that key = 0.
     If there is no -data, the program should assume that the data is an empty string.
-Keep in mind that the order of the arguments might be different. For example, -mode enc may be at the end, at the beginning or in the middle of arguments array.
+Speciality of this program is that the order of the arguments might be different. For example, -mode enc may be at the end, at the beginning or in the middle of arguments array.
