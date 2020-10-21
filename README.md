@@ -15,7 +15,7 @@ Output
 
 Input
     
-    java Main -key 5 -data "Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f" -mode dec" 
+    java Main -key 5 -data "Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f" -mode dec
 
 Output
     
