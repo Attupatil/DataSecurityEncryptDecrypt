@@ -1,10 +1,14 @@
-
-
 // import java.util.Scanner;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.PrintWriter;
+
 
 public class Main {
 
-    
+
 
     public static void main(String[] args) {
 
@@ -16,9 +20,9 @@ public class Main {
         //     System.out.println(caesarEncrypt(message, key));
         // }else if(message1.startsWith("dec")){
         //     System.out.println(caesarDecrypt(message, key));
-        // }
-        
-        
+        //
+
+
         // String algorithm = "shift";
         String mode = "enc";
         String data = "";
@@ -36,7 +40,7 @@ public class Main {
                 // case "-alg":
                 //     if (args[i+1].toLowerCase().equals("unicode")) {
                 //         algorithm = "unicode";
-                //     }
+                //
                 //     break;
             case "-key":
                 try {
@@ -48,33 +52,38 @@ public class Main {
             case "-data":
                 data = args[i+1];
                 break;
-                // case "-in":
-                //     source = args[i+1];
-                //     break;
-                // case "-out":
-                //     output = args[i+1];
-                //     break;
+            case "-in":
+                source = args[i+1];
+                break;
+            case "-out":
+                output = args[i+1];
+                break;
         }
+         if (source != null) {
+                        data = inputFromFile(source);
 
-    }
+    }}
         String message1 = mode;
         String message = data;
+        String message2 = output;
         if (message1.startsWith("enc")){
-            System.out.println(caesarEncrypt(message, key));
+            System.out.println(displayResult(caesarEncrypt(message, key),output));
         }
         else if(message1.startsWith("dec")){
-            System.out.println(caesarDecrypt(message, key));
+            System.out.println(displayResult(caesarDecrypt(message, key),output));
         }
+
+
     }
 
     public static String caesarEncrypt(String str, int key) {
         StringBuilder encoded = new StringBuilder();
 
         for (char c : str.toCharArray()) {
-            
+
                 char newChar = (char) (c + key );
                 encoded.append(newChar);
-            
+
         }
         encoded.append("\n");
         return encoded.toString();
@@ -83,13 +92,43 @@ public class Main {
         StringBuilder decoded = new StringBuilder();
 
         for (char c : str.toCharArray()) {
-            
+
             char newChar = (char) (c - key );
             decoded.append(newChar);
-            
+
         }
         decoded.append("\n");
         return decoded.toString();
 
     }
+
+        public static String inputFromFile(String url) {
+            File file = new File(url);
+            try (Scanner scanner = new Scanner(file)) {
+                    return scanner.nextLine();
+            } catch (FileNotFoundException e) {
+                return "Error! File not found!";
+            }
+        }
+
+
+        public static String outputToFile(String data, String url) {
+            File file = new File(url);
+            try (PrintWriter writer = new PrintWriter(file)) {
+                writer.print(data);
+                return file.getAbsolutePath();
+            } catch (FileNotFoundException e) {
+                return "Error! Cannot write to file! " + e.getMessage();
+            }
+        }
+         public static String displayResult(String data, String output) {
+                if (output == null) {
+                    return data;
+                } else {
+                    return outputToFile(data, output);
+                }
+            }
+
+
+
 }
