@@ -107,7 +107,7 @@ public class Main {
             try (Scanner scanner = new Scanner(file)) {
                     return scanner.nextLine();
             } catch (FileNotFoundException e) {
-                return "Error! File not found!";
+                return "Error! Try again, Reason :- File not found!";
             }
         }
 
@@ -118,7 +118,7 @@ public class Main {
                 writer.print(data);
                 return file.getAbsolutePath();
             } catch (FileNotFoundException e) {
-                return "Error! Cannot write to file! " + e.getMessage();
+                return "Error! Try again, Reason:- Cannot write to file!" + e.getMessage();
             }
         }
          public static String displayResult(String data, String output) {
