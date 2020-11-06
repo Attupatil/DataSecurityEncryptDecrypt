@@ -35,10 +35,10 @@ The program must parse three arguments: -mode, -key and -data. The first argumen
 
 All the arguments are guaranteed to be passed to the program. If for some reason it turns out to be wrong:
 
-    If there is no -mode, the program should work in enc mode.
-    If there is no -key, the program should consider that key = 0.
-    If there is no -data, the program should assume that the data is an empty string.
-Speciality of this program is that the order of the arguments might be different. For example, -mode enc may be at the end, at the beginning or in the middle of arguments array.
+    If there is no -mode, the program works in enc mode.
+    If there is no -key, the program considers that key = 0.
+    If there is no -data, the program assumes that the data is an empty string.
+Speciality of this program is that the order of the arguments might be different. For example, `-mode enc` may be at the end, at the beginning or in the middle of arguments array.
 #
 # Upgrade
 
@@ -46,9 +46,9 @@ It is often the case that  SysAdmins needs to process and store data located out
 Added the ability to read and write original and cipher data to files. The program parses two additional arguments `-in` and `-out` to specify the full name of a file to read data and to write the result.
 The program reads data from `-data` or from a file written in the `-in` argument. That's why you can't have both `-data` and `-in` arguments simultaneously, only one of them.
 
-    If there is no -data, and there is no -in the program should assume that the data is an empty string.
-    If there is no -out argument, the program must print data to the standard output.
-    If there are both -data and -in arguments, your program should prefer -data over -in.
+    If there is no -data, and there is no -in the program assumes that the data is an empty string.
+    If there is no -out argument, the program prints data to the standard output.
+    If there are both -data and -in arguments, The program prefer -data over -in.
   
 ## Run
     java Main -mode enc -in NuclearCode.txt -out WhatIsNuclear.txt -key 5  
