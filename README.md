@@ -41,6 +41,7 @@ All the arguments are guaranteed to be passed to the program. If for some reason
 Speciality of this program is that the order of the arguments might be different. For example, -mode enc may be at the end, at the beginning or in the middle of arguments array.
 
 # Upgrade________________________________
+It is often the case that  SysAdmins needs to process and store data located outside: configuration settings, some dataset for processing, logs of execution and so on. The simplest way to store data is to use files that are supported by all modern operating systems. You can consider a file as a collection of data that is stored on a disk or another device, and that can be manipulated as a single unit when addressed by its name.Therefore The program gets update about storing enc dec in files for longer and sustainable use.
 Added the ability to read and write original and cipher data to files. The program parses two additional arguments `-in` and `-out` to specify the full name of a file to read data and to write the result.
 The program reads data from `-data` or from a file written in the `-in` argument. That's why you can't have both `-data` and `-in` arguments simultaneously, only one of them.
 
