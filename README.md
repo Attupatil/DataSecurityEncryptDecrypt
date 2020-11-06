@@ -53,5 +53,5 @@ The program reads data from `-data` or from a file written in the `-in` argument
     java Main -mode enc -in NuclearCode.txt -out WhatIsNuclear.txt -key 5  
 
 ## Error Handling
-If there is a non-standard situation (an input file does not exist or an argument doesn’t have a value), the program does not fail. Instead, it displays a clear message about the problem and stop successfully. The message contains the word ```"Error! Try again, Reason:- XYZ!"``` in any case {where reason gives exact error which occured}.
+If there is a non-standard situation (an input file does not exist or an argument doesn’t have a value), the program does not fail. Instead, it displays a clear message about the problem and stop successfully. The message contains the word ```"Error! Try again, Reason:- XYZ!"``` in any case {where Reason gives exact error which occured}.
    
