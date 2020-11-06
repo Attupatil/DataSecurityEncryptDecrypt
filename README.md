@@ -40,14 +40,17 @@ All the arguments are guaranteed to be passed to the program. If for some reason
     If there is no -data, the program should assume that the data is an empty string.
 Speciality of this program is that the order of the arguments might be different. For example, -mode enc may be at the end, at the beginning or in the middle of arguments array.
 
-# Upgrade
+# Upgrade________________________________
 Added the ability to read and write original and cipher data to files. The program parses two additional arguments `-in` and `-out` to specify the full name of a file to read data and to write the result.
 The program reads data from `-data` or from a file written in the `-in` argument. That's why you can't have both `-data` and `-in` arguments simultaneously, only one of them.
 
     If there is no -data, and there is no -in the program should assume that the data is an empty string.
     If there is no -out argument, the program must print data to the standard output.
     If there are both -data and -in arguments, your program should prefer -data over -in.
-    
+  
+## Run
+    java Main -mode enc -in NuclearCode.txt -out WhatIsNuclear.txt -key 5  
+
 ## Error Handling
 If there is a non-standard situation (an input file does not exist or an argument doesn’t have a value), the program does not fail. Instead, it displays a clear message about the problem and stop successfully. The message contains the word ```"Error! Try again, Reason:- XYZ!"``` in any case {where reason gives exact error which occured}.
    
