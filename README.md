@@ -49,5 +49,5 @@ The program reads data from `-data` or from a file written in the `-in` argument
     If there are both -data and -in arguments, your program should prefer -data over -in.
     
 ## Error Handling
-If there is a non-standard situation (an input file does not exist or an argument doesn’t have a value), the program does not fail. Instead, it displays a clear message about the problem and stop successfully. The message contains the word "Error! Try again File not found!" in any case.
+If there is a non-standard situation (an input file does not exist or an argument doesn’t have a value), the program does not fail. Instead, it displays a clear message about the problem and stop successfully. The message contains the word ```"Error! Try again, Reason:- XYZ!"``` in any case {where reason gives exact error which occured}.
    
