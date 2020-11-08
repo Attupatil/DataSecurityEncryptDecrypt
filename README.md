@@ -9,20 +9,22 @@ This project includes how to encrypt and decrypt messages and texts using simple
 
 Input 
 
-    java Main -mode enc -key 5 -data "This is Secret message from Atharva" 
+``` bash
+java Main -mode enc -key 5 -data "This is Secret message from Atharva" 
+```
 
 Output  
-    
-    Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f
-
+``` bash  
+Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f
+```
 Input
-    
-    java Main -key 5 -data "Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f" -mode dec
-
+``` bash    
+java Main -key 5 -data "Ymnx%nx%Xjhwjy%rjxxflj%kwtr%Fymfw{f" -mode dec
+```
 Output
-    
-    This is Secret message from Atharva
-
+``` bash    
+This is Secret message from Atharva
+```
 ## key
 The key is assumed to mean that if a person knows the value of the key, he or she will be able to decrypt the text, and if he or she does not know, he or she will not be able to decrypt the text. It's like a real key that can open up access to the message text.
 
@@ -51,7 +53,9 @@ The program reads data from `-data` or from a file written in the `-in` argument
     If there are both -data and -in arguments, The program prefer -data over -in.
   
 ## Run
-    java Main -mode enc -in NuclearCode.txt -out WhatIsNuclear.txt -key 5  
+``` bash
+java Main -mode enc -in NuclearCode.txt -out WhatIsNuclear.txt -key 5  
+```
 This command must get data from the file `NuclearCode.txt`, encrypt the data with the key 5, create a file called `WhatIsNuclear.txt` and write ciphertext to it.
 
 ## Error Handling
