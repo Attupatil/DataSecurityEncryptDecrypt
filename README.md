@@ -5,7 +5,7 @@ Privacy is an important matter is the realm of the Internet. When sending a mess
 
 This project includes how to encrypt and decrypt messages and texts using simple algorithms.It must be noted that such algorithms are not suitable for industrial use because they can easily be cracked, but these algorithms demonstrate some general ideas about encryption.
 
-## Run
+## Normal Usage Run
 
 Input 
 
@@ -42,7 +42,7 @@ All the arguments are guaranteed to be passed to the program. If for some reason
     If there is no -data, the program assumes that the data is an empty string.
 Speciality of this program is that the order of the arguments might be different. For example, `-mode enc` may be at the end, at the beginning or in the middle of arguments array.
 #
-# Update
+# Advance Usage
 
 It is often the case that  SysAdmins needs to process and store data located outside: configuration settings, some dataset for processing, logs of execution and so on. The simplest way to store data is to use files that are supported by all modern operating systems. You can consider a file as a collection of data that is stored on a disk or another device, and that can be manipulated as a single unit when addressed by its name.Therefore The program gets update about storing enc dec in files for longer and sustainable use.
 Added the ability to read and write original and cipher data to files. The program parses two additional arguments `-in` and `-out` to specify the full name of a file to read data and to write the result.
