@@ -61,11 +61,11 @@ Output:
 This command must get data from the file `NuclearCode.txt`, encrypt the data with the key 5, create a file called `WhatIsNuclear.txt` and write `ciphertext Algorithm unicode` to it.
 
 Input:
-```
+```bash
 java Main -key 5 -alg shift -data "Ymnx nx Xjhwjy rjxxflj kwtr Fymfwaf" -mode dec
 ```
 Output:
-```
+```bash
 This is Secret message from Atharva
 ```
 
