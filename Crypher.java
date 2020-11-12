@@ -1,9 +1,9 @@
-
+//Enc-Dec 2.0
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class Main {
+public class Crypher {
 
     interface Algoritm {
 
